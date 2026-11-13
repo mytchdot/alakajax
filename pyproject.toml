@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selfplay-trainer"
+version = "0.1.0"
+description = "Native Pokemon Showdown self-play actors and JAX PPO training"
+requires-python = ">=3.12,<3.13"
+license = "GPL-3.0-only"
+dependencies = ["jax==0.12.0.1", "numpy==2.4.0"]
+
+[project.scripts]
+selfplay-trainer = "selfplay_trainer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["selfplay_trainer*"]

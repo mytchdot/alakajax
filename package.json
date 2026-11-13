@@ -1,0 +1,29 @@
+{
+  "name": "selfplay-trainer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": "24.21.0"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./encoders/v21": "./src/encoders/v21.ts",
+    "./encoders/v22": "./src/encoders/v22.ts",
+    "./legal": "./src/legal.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "teams": "node --import tsx src/teams.ts"
+  },
+  "dependencies": {
+    "pokemon-showdown": "0.11.11",
+    "tsx": "4.23.15"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "24.19.0"
+  }
+}

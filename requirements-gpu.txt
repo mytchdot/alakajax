@@ -1,0 +1,4 @@
+# CUDA 13 wheels on supported Linux GPUs. Install instead of requirements.txt.
+# The remaining Python dependency versions are locked by requirements.txt.
+-r requirements.txt
+jax[cuda13]==0.12.0.1
